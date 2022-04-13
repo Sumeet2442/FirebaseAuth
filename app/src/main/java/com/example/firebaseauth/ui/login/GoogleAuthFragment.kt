@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.firebaseauth.MainActivity
 import com.example.firebaseauth.R
 import com.example.firebaseauth.databinding.FragmentGoogelAuthBinding
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
@@ -45,7 +46,7 @@ class GoogleAuthFragment : Fragment() {
                 BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
                     .setSupported(true)
                     // Your server's client ID, not your Android client ID.
-                    .setServerClientId(getString(R.string.your_web_client_))
+                    .setServerClientId(getString(R.string.your_web_client_id))
                     // Only show accounts previously used to sign in.
                     .setFilterByAuthorizedAccounts(false)
                     .build())
@@ -71,13 +72,15 @@ class GoogleAuthFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         var currentUser = auth.getCurrentUser()
-        updateUI(currentUser);
+        if(currentUser!=null){
+            updateUI(currentUser)
+        };
     }
 
     private fun updateUI(currentUser: FirebaseUser?) {
-       currentUser?.displayName?.let {
-           Snackbar.make(binding.root,it,Snackbar.LENGTH_INDEFINITE).show()
-       }
+        val i:Intent = Intent(requireContext(),MainActivity::class.java)
+        requireActivity().startActivity(i)
+        requireActivity().finish()
     }
 
     override fun onDestroyView() {

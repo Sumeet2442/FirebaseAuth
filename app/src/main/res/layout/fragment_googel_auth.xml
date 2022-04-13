@@ -5,6 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E57373"
+    android:backgroundTintMode="src_over"
     tools:context=".ui.login.GoogleAuthFragment">
 
     <TextView
@@ -18,7 +20,7 @@
         android:text="Login with Google to continue"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#986AE8"
+        android:textColor="#D0512DA8"
         android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="sans"
