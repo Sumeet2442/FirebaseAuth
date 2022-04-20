@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
         <item>@font/acme</item>
+        <item>@font/aladin</item>
         <item>@font/aleo</item>
+        <item>@font/alice</item>
         <item>@font/averia_libre</item>
+        <item>@font/biorhyme</item>
     </array>
 </resources>

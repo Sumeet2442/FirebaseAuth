@@ -59,6 +59,7 @@ class HomeFragment : Fragment() {
                 Snackbar.make(binding.root,it.message.toString(),Snackbar.LENGTH_INDEFINITE).show()
             }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
