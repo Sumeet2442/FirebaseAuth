@@ -33,8 +33,6 @@
         android:id="@+id/btnSignIn"
         android:layout_width="wrap_content"
         android:layout_height="56dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="106dp"
         android:layout_marginBottom="56dp"
         android:fontFamily="sans-serif"
         android:text="sign in with google"
@@ -52,11 +50,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="220dp"
-        android:layout_marginStart="60dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="60dp"
         android:src="@drawable/avv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
